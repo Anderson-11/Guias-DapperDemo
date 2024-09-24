@@ -24,5 +24,12 @@ namespace DapperDemo
             var cliente = customerR.ObtenerTodo();
             dgvCustomers.DataSource = cliente;
         }
+
+        private void btnObtenerID_Click(object sender, EventArgs e)
+        {
+            var cliente = customerR.ObtenerPorID(tboxObtenerID.Text);
+            dgvCustomers.DataSource = new List<Customers> { cliente };
+            tboxObtenerID.Text = "";
+        }
     }
 }

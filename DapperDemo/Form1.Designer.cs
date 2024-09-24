@@ -30,20 +30,23 @@
         {
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.btnObtenerTodos = new System.Windows.Forms.Button();
+            this.btnObtenerID = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tboxObtenerID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCustomers
             // 
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(12, 39);
+            this.dgvCustomers.Location = new System.Drawing.Point(12, 12);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.Size = new System.Drawing.Size(687, 230);
             this.dgvCustomers.TabIndex = 0;
             // 
             // btnObtenerTodos
             // 
-            this.btnObtenerTodos.Location = new System.Drawing.Point(305, 297);
+            this.btnObtenerTodos.Location = new System.Drawing.Point(313, 336);
             this.btnObtenerTodos.Name = "btnObtenerTodos";
             this.btnObtenerTodos.Size = new System.Drawing.Size(100, 34);
             this.btnObtenerTodos.TabIndex = 1;
@@ -51,17 +54,47 @@
             this.btnObtenerTodos.UseVisualStyleBackColor = true;
             this.btnObtenerTodos.Click += new System.EventHandler(this.btnObtenerTodos_Click);
             // 
+            // btnObtenerID
+            // 
+            this.btnObtenerID.Location = new System.Drawing.Point(48, 305);
+            this.btnObtenerID.Name = "btnObtenerID";
+            this.btnObtenerID.Size = new System.Drawing.Size(75, 23);
+            this.btnObtenerID.TabIndex = 2;
+            this.btnObtenerID.Text = "Buscar";
+            this.btnObtenerID.UseVisualStyleBackColor = true;
+            this.btnObtenerID.Click += new System.EventHandler(this.btnObtenerID_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 270);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ID Cliente:";
+            // 
+            // tboxObtenerID
+            // 
+            this.tboxObtenerID.Location = new System.Drawing.Point(70, 267);
+            this.tboxObtenerID.Name = "tboxObtenerID";
+            this.tboxObtenerID.Size = new System.Drawing.Size(100, 20);
+            this.tboxObtenerID.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 382);
+            this.Controls.Add(this.tboxObtenerID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnObtenerID);
             this.Controls.Add(this.btnObtenerTodos);
             this.Controls.Add(this.dgvCustomers);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,6 +102,9 @@
 
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Button btnObtenerTodos;
+        private System.Windows.Forms.Button btnObtenerID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tboxObtenerID;
     }
 }
 
