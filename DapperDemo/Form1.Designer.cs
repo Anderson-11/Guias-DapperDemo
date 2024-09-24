@@ -44,6 +44,7 @@
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             // btnObtenerTodos
             // 
-            this.btnObtenerTodos.Location = new System.Drawing.Point(176, 409);
+            this.btnObtenerTodos.Location = new System.Drawing.Point(89, 409);
             this.btnObtenerTodos.Name = "btnObtenerTodos";
             this.btnObtenerTodos.Size = new System.Drawing.Size(100, 34);
             this.btnObtenerTodos.TabIndex = 1;
@@ -173,7 +174,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(429, 409);
+            this.btnInsertar.Location = new System.Drawing.Point(389, 409);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(100, 34);
             this.btnInsertar.TabIndex = 17;
@@ -181,11 +182,22 @@
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(535, 409);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 34);
+            this.btnEliminar.TabIndex = 18;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 459);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.txbAddress);
             this.Controls.Add(this.label6);
@@ -228,6 +240,7 @@
         private System.Windows.Forms.TextBox txbAddress;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

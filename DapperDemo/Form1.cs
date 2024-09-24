@@ -31,6 +31,16 @@ namespace DapperDemo
             var cliente = customerR.ObtenerPorID(tboxObtenerID.Text);
             dgvCustomers.DataSource = new List<Customers> { cliente };
             tboxObtenerID.Text = "";
+            ObtenerDatos(cliente);
+        }
+
+        private void ObtenerDatos(Customers customer)
+        {
+            txbCustomerId.Text = customer.CustomerID;
+            txbCompanyName.Text = customer.CompanyName;
+            txbContactName.Text = customer.ContactName;
+            txbContactTitle.Text = customer.ContactTitle;
+            txbAddress.Text = customer.Address;
         }
 
         private Customers CrearCliente()
@@ -61,6 +71,17 @@ namespace DapperDemo
             txbContactName.Text = "";
             txbContactTitle.Text = "";
             txbAddress.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var eliminados = customerR.EliminarCliente(txbCustomerId.Text);
+
+            if (eliminados == 1)
+            {
+                MessageBox.Show("Eliminado");
+                Limpiar();
+            }
         }
     }
 }
