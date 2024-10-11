@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,7 +175,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(389, 409);
+            this.btnInsertar.Location = new System.Drawing.Point(326, 409);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(100, 34);
             this.btnInsertar.TabIndex = 17;
@@ -184,7 +185,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(535, 409);
+            this.btnEliminar.Location = new System.Drawing.Point(589, 409);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 34);
             this.btnEliminar.TabIndex = 18;
@@ -192,11 +193,22 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(458, 409);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(100, 34);
+            this.btnActualizar.TabIndex = 19;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 459);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.txbAddress);
@@ -241,6 +253,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
 

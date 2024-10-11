@@ -32,6 +32,7 @@ namespace DapperDemo
             dgvCustomers.DataSource = new List<Customers> { cliente };
             tboxObtenerID.Text = "";
             ObtenerDatos(cliente);
+            txbCustomerId.Enabled = false;
         }
 
         private void ObtenerDatos(Customers customer)
@@ -81,7 +82,21 @@ namespace DapperDemo
             {
                 MessageBox.Show("Eliminado");
                 Limpiar();
+                txbCustomerId.Enabled = true;
             }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            var clienteActualizado = CrearCliente();
+            var actualizados = customerR.AcctualizarCliente(clienteActualizado);
+            var cliente = customerR.ObtenerPorID(clienteActualizado.CustomerID);
+            dgvCustomers.DataSource = new List<Customers> { cliente };
+
+
+            MessageBox.Show($"Se actualizo a {actualizados} , {clienteActualizado.CustomerID}");
+            Limpiar();
+            txbCustomerId.Enabled = true;
         }
     }
 }
